@@ -1,0 +1,3 @@
+com.spi.smart_on_fhir.mappers.ConfigurablePrefixAttributeMapper
+com.spi.smart_on_fhir.mappers.SelectedScopeMapper
+com.spi.smart_on_fhir.saml.ConditionalUserSessionNoteMapper

@@ -1,0 +1,3 @@
+com.spi.smart_on_fhir.factory.PatientSelectionFormFactory
+com.spi.smart_on_fhir.factory.ScopeSelectionFormFactory
+com.spi.smart_on_fhir.factory.AudienceValidatorFactory

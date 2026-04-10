@@ -1,0 +1,14 @@
+com\spi\smart_on_fhir\authentication\ScopeSelectionForm.class
+com\spi\smart_on_fhir\saml\ConditionalUserSessionNoteMapper.class
+com\spi\smart_on_fhir\authentication\PatientSelectionForm.class
+com\spi\smart_on_fhir\filters\TokenEndpointResponseFilter.class
+com\spi\smart_on_fhir\factory\PatientSelectionFormFactory.class
+com\spi\smart_on_fhir\saml\SamlAssertionToUserSessionNoteMapper.class
+com\spi\smart_on_fhir\factory\AudienceValidatorFactory.class
+com\spi\smart_on_fhir\utils\Constants.class
+com\spi\smart_on_fhir\mappers\ConfigurablePrefixAttributeMapper.class
+com\spi\smart_on_fhir\models\PatientDTO.class
+com\spi\smart_on_fhir\service\ExternalApiService.class
+com\spi\smart_on_fhir\mappers\SelectedScopeMapper.class
+com\spi\smart_on_fhir\authentication\AudienceValidator.class
+com\spi\smart_on_fhir\factory\ScopeSelectionFormFactory.class
