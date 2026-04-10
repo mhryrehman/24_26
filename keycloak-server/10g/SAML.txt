@@ -1,0 +1,108 @@
+Sample SAML Base64 : 
+
+PHNhbWxwOlJlc3BvbnNlIHhtbG5zOnNhbWxwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIHhtbG5zOnNhbWw9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphc3NlcnRpb24iIElEPSJfMjJhYmZlM2QtYTY3YS00NzQ5LWE3N2QtOTU4MDBjNGZmYTJiIiBWZXJzaW9uPSIyLjAiIElzc3VlSW5zdGFudD0iMjAyNi0wMS0xNlQxODozOToyMC40MDRaIiBEZXN0aW5hdGlvbj0iaHR0cHM6Ly9maGlyc21hcnRhdXRoc2FuZGJveC5jdXJlbWQubmV0L3JlYWxtcy9GaGlyU2FuZGJveC9icm9rZXIvc2FtbDEwZy9lbmRwb2ludC9jbGllbnRzL3NhbWwxMGdyZWdyZXNzaW9uIj48c2FtbDpJc3N1ZXI+aHR0cDovL3d3dy5jdXJlbWQuY29tLzwvc2FtbDpJc3N1ZXI+PFNpZ25hdHVyZSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PFNpZ25lZEluZm8+PENhbm9uaWNhbGl6YXRpb25NZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiIC8+PFNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI3JzYS1zaGEyNTYiIC8+PFJlZmVyZW5jZSBVUkk9IiNfMjJhYmZlM2QtYTY3YS00NzQ5LWE3N2QtOTU4MDBjNGZmYTJiIj48VHJhbnNmb3Jtcz48VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiIC8+PFRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMTAveG1sLWV4Yy1jMTRuIyIgLz48L1RyYW5zZm9ybXM+PERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jI3NoYTI1NiIgLz48RGlnZXN0VmFsdWU+VlBCa1NidUtKNitmZkxoZkFFMm5OTHpLNkV5dTRMMURlYjZySUl0eHVvQT08L0RpZ2VzdFZhbHVlPjwvUmVmZXJlbmNlPjwvU2lnbmVkSW5mbz48U2lnbmF0dXJlVmFsdWU+aFdGNVpzaS9Sb3EwdGw5Mzl5SFlaNGFzNTN1YUpFbnIzdko4MUZ4R0FVQjhtMXJOVWRoV0tLdXBqejFUZko0TGFNWTcrVUM1aEV3Z1Q0cnpKMlJ1RTJmcGljbzZvbVZBbWxBL2ZpR2VIQW1ldjlIa1FWQ3Q0YmdWaHZ0ZnRrdGNHLzVIRi9vTkY0bnRkRnNuejViazVhYTNrdmtGK252VlFRbUhLRDBlWkFnY0xJZHdkUFlqTGszaEVhQjZwSDc4TEZ5blZKaVJ6YzIzTWx2VDRVRXZDcEx4TzJ6UTRVM1NpbzBRN1V2VURqZnpPVzk4Nkh1S3I4MklnalBzd1RHTXFXWEJXV251MmxiRlREUWMzSmR2V3F1RUU2V0FTK015NXR3UDZuejJWcnJFZ1BHQ3BVc1R3K3ZKeVFndTBGaUM3clZ5SjJWb1NZTmFKZlpMZHp2NU5RPT08L1NpZ25hdHVyZVZhbHVlPjxLZXlJbmZvPjxYNTA5RGF0YT48WDUwOUNlcnRpZmljYXRlPk1JSUM3RENDQWRTZ0F3SUJBZ0lRR0tJT0VPWVpBcHRIVFYrUC82NnV0ekFOQmdrcWhraUc5dzBCQVFzRkFEQVVNUkl3RUFZRFZRUURFd2xzYjJOaGJHaHZjM1F3SGhjTk1qSXhNREl3TURrek1ERTFXaGNOTWpjeE1ESXdNREF3TURBd1dqQVVNUkl3RUFZRFZRUURFd2xzYjJOaGJHaHZjM1F3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRExoY1Fta0xKWjRoQTVIUnREYjUrSS9yakR3cGUxNDlYbmlXd1g0OEtNVDJYbzJVUkZLbEpMczZiclU1OEZNR0JNM1lDYmxGdys1dWxCQmtuRjQrQmZidXNDVTNhUGF2ZEhOYmdIVytvbmMydWpQMStDWWg4eGRFSHBuQWdXUHRTU2RVa3ZXU1dRL1ZUdkVsSlRNTW1IMnM0OFpLRThQVElITjVZcVprNzBsUkoyOUtRU0o0SVl4NTEwOTVwcFRDZjRWRVphQUVqMEpIbmRsb3h0NzVKb3RudUppMUFybTBqU2JJTVpSYWJoem1TbEFLdWhBelNWazc4N3JZaEZTWDhMQ0lHQk9FL2FLWDRRb0prUU1OQTNHQmF5a3RvVytkQmNBcm1wNVR3d1R3L1pGSkFKU2VSYjcwUG1aRFZHQXlZNWxSeGYvUFk0OWZEZXN4OGdDS0hoQWdNQkFBR2pPakE0TUFzR0ExVWREd1FFQXdJRXNEQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBVEFVQmdOVkhSRUVEVEFMZ2dsc2IyTmhiR2h2YzNRd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFCbHU2M0d2dTRRK1VoM0JYdjk1UkJUUnFSMklteTlrZ29hMDB3RVZkWUNJd2Z2eGk5RVRWTno5dmQ2blYrcHA5NGxNaDMzY1VFMHJMSHhGRjArTkk4RHg1Rnh5Y3VSWGtOeGtnREVVZXRQZnUzMlRlU2lwejJVaWlqbHVsd2ZwcXYydGF0MmJtWGlUV3JWVFhJczBIeStQUE93bXFiY0dnb1lHcUFHcUs3blpzSmJ4WkxHOFpPT2ltYUxvVmxadHRjYTcyK2JYZVlKOE1XOXpNTjNvTzZ1N0xPUG4vRmVORXI1WXlPRnAxY09GSkliVjQ4b1VnOUNHVGFqMWRwOEYrUHdPWGFZQlpyeFVONVd0U0NYcjg1T0pwbk16NUhFTTYremIrTjV4WUxLcnRHSUNaMUlFWG1ISVBCc0JUazAzSG05S1ZZWjB4dTNOVTEwdWRNUjFSWGs9PC9YNTA5Q2VydGlmaWNhdGU+PC9YNTA5RGF0YT48L0tleUluZm8+PC9TaWduYXR1cmU+PHNhbWxwOlN0YXR1cz48c2FtbHA6U3RhdHVzQ29kZSBWYWx1ZT0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnN0YXR1czpTdWNjZXNzIiAvPjwvc2FtbHA6U3RhdHVzPjxzYW1sOkFzc2VydGlvbiBJRD0iXzJlYzEzY2E0LTU0NmItNDJiYi04YTBmLWNkM2ZlYjliMjdmYiIgSXNzdWVJbnN0YW50PSIyMDI2LTAxLTE2VDE4OjM5OjIwLjQzN1oiIFZlcnNpb249IjIuMCIgeG1sbnM6c2FtbD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiI+PHNhbWw6SXNzdWVyPmh0dHA6Ly93d3cuY3VyZW1kLmNvbS88L3NhbWw6SXNzdWVyPjxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPjxTaWduZWRJbmZvPjxDYW5vbmljYWxpemF0aW9uTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIiAvPjxTaWduYXR1cmVNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiAvPjxSZWZlcmVuY2UgVVJJPSIjXzJlYzEzY2E0LTU0NmItNDJiYi04YTBmLWNkM2ZlYjliMjdmYiI+PFRyYW5zZm9ybXM+PFRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIiAvPjxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiIC8+PC9UcmFuc2Zvcm1zPjxEaWdlc3RNZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGVuYyNzaGEyNTYiIC8+PERpZ2VzdFZhbHVlPnBYd1paU1I0eVRyOERMck1OcEswcnVqLzRyOFUveC9CdU9FRGZtNEtvb2s9PC9EaWdlc3RWYWx1ZT48L1JlZmVyZW5jZT48L1NpZ25lZEluZm8+PFNpZ25hdHVyZVZhbHVlPm1SajhhbFA1MFNSRmRsSGwrb29ybGlPWHVsSnJKRTRBT25UMmpjY1dzUDRjUFpNdkZPNW1DQVJQZElkVmJrOXdUOTJIVmhtejQxT2VhTElON3FHcU1CcWhBbkFiUzlBNndveHo5d2hjVUxnWHZDbmRDWWlKRXBvWituTnF4UGRob1BObkw3Sk5Md29EV243dVRNTHFBa2ZwRXNZUG1HZklBV2hCazFQNjlxZmpIdUV6SmI3dmNVd0x2L2dNYlg5ZEkvdmtoUDBuQmYvRUNaRmYzU0FReWVMK2M1Nms0N1RQcjhYQzUxWTZPRUV5MkxYNy9ZTEpOb0NQcTdZTmVXVTRuU3l4MDJLajFSby9DUmEyQ2Zqdy9yMjVkQUVIRXJUNzVpdVpzVFlheHdFMlRPKzdvKzQ4aSt0NHhNclk5SExzZlBPUUMyVk50amhaOVc3YnJmUXQzQT09PC9TaWduYXR1cmVWYWx1ZT48S2V5SW5mbz48WDUwOURhdGE+PFg1MDlDZXJ0aWZpY2F0ZT5NSUlDN0RDQ0FkU2dBd0lCQWdJUUdLSU9FT1laQXB0SFRWK1AvNjZ1dHpBTkJna3Foa2lHOXcwQkFRc0ZBREFVTVJJd0VBWURWUVFERXdsc2IyTmhiR2h2YzNRd0hoY05Nakl4TURJd01Ea3pNREUxV2hjTk1qY3hNREl3TURBd01EQXdXakFVTVJJd0VBWURWUVFERXdsc2IyTmhiR2h2YzNRd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURMaGNRbWtMSlo0aEE1SFJ0RGI1K0kvcmpEd3BlMTQ5WG5pV3dYNDhLTVQyWG8yVVJGS2xKTHM2YnJVNThGTUdCTTNZQ2JsRncrNXVsQkJrbkY0K0JmYnVzQ1UzYVBhdmRITmJnSFcrb25jMnVqUDErQ1loOHhkRUhwbkFnV1B0U1NkVWt2V1NXUS9WVHZFbEpUTU1tSDJzNDhaS0U4UFRJSE41WXFaazcwbFJKMjlLUVNKNElZeDUxMDk1cHBUQ2Y0VkVaYUFFajBKSG5kbG94dDc1Sm90bnVKaTFBcm0walNiSU1aUmFiaHptU2xBS3VoQXpTVms3ODdyWWhGU1g4TENJR0JPRS9hS1g0UW9Ka1FNTkEzR0JheWt0b1crZEJjQXJtcDVUd3dUdy9aRkpBSlNlUmI3MFBtWkRWR0F5WTVsUnhmL1BZNDlmRGVzeDhnQ0tIaEFnTUJBQUdqT2pBNE1Bc0dBMVVkRHdRRUF3SUVzREFUQmdOVkhTVUVEREFLQmdnckJnRUZCUWNEQVRBVUJnTlZIUkVFRFRBTGdnbHNiMk5oYkdodmMzUXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBQmx1NjNHdnU0UStVaDNCWHY5NVJCVFJxUjJJbXk5a2dvYTAwd0VWZFlDSXdmdnhpOUVUVk56OXZkNm5WK3BwOTRsTWgzM2NVRTByTEh4RkYwK05JOER4NUZ4eWN1UlhrTnhrZ0RFVWV0UGZ1MzJUZVNpcHoyVWlpamx1bHdmcHF2MnRhdDJibVhpVFdyVlRYSXMwSHkrUFBPd21xYmNHZ29ZR3FBR3FLN25ac0pieFpMRzhaT09pbWFMb1ZsWnR0Y2E3MitiWGVZSjhNVzl6TU4zb082dTdMT1BuL0ZlTkVyNVl5T0ZwMWNPRkpJYlY0OG9VZzlDR1RhajFkcDhGK1B3T1hhWUJacnhVTjVXdFNDWHI4NU9KcG5NejVIRU02K3piK041eFlMS3J0R0lDWjFJRVhtSElQQnNCVGswM0htOUtWWVoweHUzTlUxMHVkTVIxUlhrPTwvWDUwOUNlcnRpZmljYXRlPjwvWDUwOURhdGE+PC9LZXlJbmZvPjwvU2lnbmF0dXJlPjxzYW1sOlN1YmplY3Q+PHNhbWw6TmFtZUlEIEZvcm1hdD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOm5hbWVpZC1mb3JtYXQ6cGVyc2lzdGVudCI+Q01EQkxfMjczPC9zYW1sOk5hbWVJRD48c2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uIE1ldGhvZD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmNtOmJlYXJlciI+PHNhbWw6U3ViamVjdENvbmZpcm1hdGlvbkRhdGEgTm90T25PckFmdGVyPSIyMDI2LTAyLTEwVDE4OjM5OjIwLjQ1MFoiIFJlY2lwaWVudD0iaHR0cHM6Ly9maGlyc21hcnRhdXRoc2FuZGJveC5jdXJlbWQubmV0L3JlYWxtcy9GaGlyU2FuZGJveC9icm9rZXIvc2FtbDEwZy9lbmRwb2ludC9jbGllbnRzL3NhbWwxMGdyZWdyZXNzaW9uIiAvPjwvc2FtbDpTdWJqZWN0Q29uZmlybWF0aW9uPjwvc2FtbDpTdWJqZWN0PjxzYW1sOkNvbmRpdGlvbnMgTm90QmVmb3JlPSIyMDI2LTAxLTE2VDE4OjM5OjIwLjQ0M1oiIE5vdE9uT3JBZnRlcj0iMjAyNi0wMi0xMFQxODozOToyMC40MzZaIj48c2FtbDpBdWRpZW5jZVJlc3RyaWN0aW9uPjxzYW1sOkF1ZGllbmNlPmh0dHBzOi8vZmhpcnNtYXJ0YXV0aHNhbmRib3guY3VyZW1kLm5ldC9yZWFsbXMvRmhpclNhbmRib3g8L3NhbWw6QXVkaWVuY2U+PC9zYW1sOkF1ZGllbmNlUmVzdHJpY3Rpb24+PC9zYW1sOkNvbmRpdGlvbnM+PHNhbWw6QXR0cmlidXRlU3RhdGVtZW50PjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlPkF0dGVuZGluZyBQaHlzaWNpYW48L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI+PHNhbWw6QXR0cmlidXRlVmFsdWU+aHNhZWVkMjU8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc3VybmFtZSI+PHNhbWw6QXR0cmlidXRlVmFsdWU+U2FlZWQ8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZT5IYXNzYW48L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvaG9tZXBob25lIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZSAvPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI+PHNhbWw6QXR0cmlidXRlVmFsdWUgLz48L3NhbWw6QXR0cmlidXRlPjxzYW1sOkF0dHJpYnV0ZSBOYW1lPSJTTUFSVF9hcHAiPjxzYW1sOkF0dHJpYnV0ZVZhbHVlPnRlc3RfcHl0aG9uPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlNNQVJUX3BhdGllbnRJZCI+PHNhbWw6QXR0cmlidXRlVmFsdWU+c3RyaW5nPC9zYW1sOkF0dHJpYnV0ZVZhbHVlPjwvc2FtbDpBdHRyaWJ1dGU+PHNhbWw6QXR0cmlidXRlIE5hbWU9IlNNQVJUX2VuY291bnRlcklkIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZT5zdHJpbmc8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48c2FtbDpBdHRyaWJ1dGUgTmFtZT0iU01BUlRfbGF1bmNoIj48c2FtbDpBdHRyaWJ1dGVWYWx1ZT4xYmUyMGFhYi0wYWYzLWYwMTEtODkxYy0wMDE1NWQwYTIwMDg8L3NhbWw6QXR0cmlidXRlVmFsdWU+PC9zYW1sOkF0dHJpYnV0ZT48L3NhbWw6QXR0cmlidXRlU3RhdGVtZW50PjxzYW1sOkF1dGhuU3RhdGVtZW50IEF1dGhuSW5zdGFudD0iMjAyNi0wMS0xNlQxODozOToyMC40NTBaIj48c2FtbDpBdXRobkNvbnRleHQ+PHNhbWw6QXV0aG5Db250ZXh0Q2xhc3NSZWY+dXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UGFzc3dvcmRQcm90ZWN0ZWRUcmFuc3BvcnQ8L3NhbWw6QXV0aG5Db250ZXh0Q2xhc3NSZWY+PC9zYW1sOkF1dGhuQ29udGV4dD48L3NhbWw6QXV0aG5TdGF0ZW1lbnQ+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg==
+
+
+
+Sample SAML XML : 
+
+
+
+<samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="_22abfe3d-a67a-4749-a77d-95800c4ffa2b" Version="2.0" IssueInstant="2026-01-16T18:39:20.404Z" Destination="https://fhirsmartauthsandbox.curemd.net/realms/FhirSandbox/broker/saml10g/endpoint/clients/saml10gregression">
+  <saml:Issuer>http://www.curemd.com/</saml:Issuer>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <Reference URI="#_22abfe3d-a67a-4749-a77d-95800c4ffa2b">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+          <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <DigestValue>VPBkSbuKJ6+ffLhfAE2nNLzK6Eyu4L1Deb6rIItxuoA=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>hWF5Zsi/Roq0tl939yHYZ4as53uaJEnr3vJ81FxGAUB8m1rNUdhWKKupjz1TfJ4LaMY7+UC5hEwgT4rzJ2RuE2fpico6omVAmlA/fiGeHAmev9HkQVCt4bgVhvtftktcG/5HF/oNF4ntdFsnz5bk5aa3kvkF+nvVQQmHKD0eZAgcLIdwdPYjLk3hEaB6pH78LFynVJiRzc23MlvT4UEvCpLxO2zQ4U3Sio0Q7UvUDjfzOW986HuKr82IgjPswTGMqWXBWWnu2lbFTDQc3JdvWquEE6WAS+My5twP6nz2VrrEgPGCpUsTw+vJyQgu0FiC7rVyJ2VoSYNaJfZLdzv5NQ==</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIC7DCCAdSgAwIBAgIQGKIOEOYZAptHTV+P/66utzANBgkqhkiG9w0BAQsFADAUMRIwEAYDVQQDEwlsb2NhbGhvc3QwHhcNMjIxMDIwMDkzMDE1WhcNMjcxMDIwMDAwMDAwWjAUMRIwEAYDVQQDEwlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLhcQmkLJZ4hA5HRtDb5+I/rjDwpe149XniWwX48KMT2Xo2URFKlJLs6brU58FMGBM3YCblFw+5ulBBknF4+BfbusCU3aPavdHNbgHW+onc2ujP1+CYh8xdEHpnAgWPtSSdUkvWSWQ/VTvElJTMMmH2s48ZKE8PTIHN5YqZk70lRJ29KQSJ4IYx51095ppTCf4VEZaAEj0JHndloxt75JotnuJi1Arm0jSbIMZRabhzmSlAKuhAzSVk787rYhFSX8LCIGBOE/aKX4QoJkQMNA3GBayktoW+dBcArmp5TwwTw/ZFJAJSeRb70PmZDVGAyY5lRxf/PY49fDesx8gCKHhAgMBAAGjOjA4MAsGA1UdDwQEAwIEsDATBgNVHSUEDDAKBggrBgEFBQcDATAUBgNVHREEDTALgglsb2NhbGhvc3QwDQYJKoZIhvcNAQELBQADggEBABlu63Gvu4Q+Uh3BXv95RBTRqR2Imy9kgoa00wEVdYCIwfvxi9ETVNz9vd6nV+pp94lMh33cUE0rLHxFF0+NI8Dx5FxycuRXkNxkgDEUetPfu32TeSipz2Uiijlulwfpqv2tat2bmXiTWrVTXIs0Hy+PPOwmqbcGgoYGqAGqK7nZsJbxZLG8ZOOimaLoVlZttca72+bXeYJ8MW9zMN3oO6u7LOPn/FeNEr5YyOFp1cOFJIbV48oUg9CGTaj1dp8F+PwOXaYBZrxUN5WtSCXr85OJpnMz5HEM6+zb+N5xYLKrtGICZ1IEXmHIPBsBTk03Hm9KVYZ0xu3NU10udMR1RXk=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+  <samlp:Status>
+    <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+  </samlp:Status>
+  <saml:Assertion ID="_2ec13ca4-546b-42bb-8a0f-cd3feb9b27fb" IssueInstant="2026-01-16T18:39:20.437Z" Version="2.0">
+    <saml:Issuer>http://www.curemd.com/</saml:Issuer>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+        <Reference URI="#_2ec13ca4-546b-42bb-8a0f-cd3feb9b27fb">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+          <DigestValue>pXwZZSR4yTr8DLrMNpK0ruj/4r8U/x/BuOEDfm4Kook=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>mRj8alP50SRFdlHl+oorliOXulJrJE4AOnT2jccWsP4cPZMvFO5mCARPdIdVbk9wT92HVhmz41OeaLIN7qGqMBqhAnAbS9A6woxz9whcULgXvCndCYiJEpoZ+nNqxPdhoPNnL7JNLwoDWn7uTMLqAkfpEsYPmGfIAWhBk1P69qfjHuEzJb7vcUwLv/gMbX9dI/vkhP0nBf/ECZFf3SAQyeL+c56k47TPr8XC51Y6OEEy2LX7/YLJNoCPq7YNeWU4nSyx02Kj1Ro/CRa2Cfjw/r25dAEHErT75iuZsTYaxwE2TO+7o+48i+t4xMrY9HLsfPOQC2VNtjhZ9W7brfQt3A==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>MIIC7DCCAdSgAwIBAgIQGKIOEOYZAptHTV+P/66utzANBgkqhkiG9w0BAQsFADAUMRIwEAYDVQQDEwlsb2NhbGhvc3QwHhcNMjIxMDIwMDkzMDE1WhcNMjcxMDIwMDAwMDAwWjAUMRIwEAYDVQQDEwlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLhcQmkLJZ4hA5HRtDb5+I/rjDwpe149XniWwX48KMT2Xo2URFKlJLs6brU58FMGBM3YCblFw+5ulBBknF4+BfbusCU3aPavdHNbgHW+onc2ujP1+CYh8xdEHpnAgWPtSSdUkvWSWQ/VTvElJTMMmH2s48ZKE8PTIHN5YqZk70lRJ29KQSJ4IYx51095ppTCf4VEZaAEj0JHndloxt75JotnuJi1Arm0jSbIMZRabhzmSlAKuhAzSVk787rYhFSX8LCIGBOE/aKX4QoJkQMNA3GBayktoW+dBcArmp5TwwTw/ZFJAJSeRb70PmZDVGAyY5lRxf/PY49fDesx8gCKHhAgMBAAGjOjA4MAsGA1UdDwQEAwIEsDATBgNVHSUEDDAKBggrBgEFBQcDATAUBgNVHREEDTALgglsb2NhbGhvc3QwDQYJKoZIhvcNAQELBQADggEBABlu63Gvu4Q+Uh3BXv95RBTRqR2Imy9kgoa00wEVdYCIwfvxi9ETVNz9vd6nV+pp94lMh33cUE0rLHxFF0+NI8Dx5FxycuRXkNxkgDEUetPfu32TeSipz2Uiijlulwfpqv2tat2bmXiTWrVTXIs0Hy+PPOwmqbcGgoYGqAGqK7nZsJbxZLG8ZOOimaLoVlZttca72+bXeYJ8MW9zMN3oO6u7LOPn/FeNEr5YyOFp1cOFJIbV48oUg9CGTaj1dp8F+PwOXaYBZrxUN5WtSCXr85OJpnMz5HEM6+zb+N5xYLKrtGICZ1IEXmHIPBsBTk03Hm9KVYZ0xu3NU10udMR1RXk=</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+    <saml:Subject>
+      <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent">CMDBL_273</saml:NameID>
+      <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+        <saml:SubjectConfirmationData NotOnOrAfter="2026-02-10T18:39:20.450Z" Recipient="https://fhirsmartauthsandbox.curemd.net/realms/FhirSandbox/broker/saml10g/endpoint/clients/saml10gregression"/>
+      </saml:SubjectConfirmation>
+    </saml:Subject>
+    <saml:Conditions NotBefore="2026-01-16T18:39:20.443Z" NotOnOrAfter="2026-02-10T18:39:20.436Z">
+      <saml:AudienceRestriction>
+        <saml:Audience>https://fhirsmartauthsandbox.curemd.net/realms/FhirSandbox</saml:Audience>
+      </saml:AudienceRestriction>
+    </saml:Conditions>
+    <saml:AttributeStatement>
+      <saml:Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role">
+        <saml:AttributeValue>Attending Physician</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+        <saml:AttributeValue>hsaeed25</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+        <saml:AttributeValue>Saeed</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+        <saml:AttributeValue>Hassan</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/homephone">
+        <saml:AttributeValue/>
+      </saml:Attribute>
+      <saml:Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">
+        <saml:AttributeValue/>
+      </saml:Attribute>
+      <saml:Attribute Name="SMART_app">
+        <saml:AttributeValue>test_python</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="SMART_patientId">
+        <saml:AttributeValue>string</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="SMART_encounterId">
+        <saml:AttributeValue>string</saml:AttributeValue>
+      </saml:Attribute>
+      <saml:Attribute Name="SMART_launch">
+        <saml:AttributeValue>1be20aab-0af3-f011-891c-00155d0a2008</saml:AttributeValue>
+      </saml:Attribute>
+    </saml:AttributeStatement>
+    <saml:AuthnStatement AuthnInstant="2026-01-16T18:39:20.450Z">
+      <saml:AuthnContext>
+        <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml:AuthnContextClassRef>
+      </saml:AuthnContext>
+    </saml:AuthnStatement>
+  </saml:Assertion>
+</samlp:Response>
+

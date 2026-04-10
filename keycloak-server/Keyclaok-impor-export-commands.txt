@@ -1,0 +1,72 @@
+docker exec -it keycloak /bin/bash
+
+cd /opt/bitnami/keycloak/bin/bash
+
+./kc.sh export --dir /tmp/keycloak-export --realm testing --users skip
+
+
+docker cp keycloak:/tmp/keycloak-export C:\Users\yasir.rehman\keycloak-server
+
+docker restart keycloak
+
+docker cp /local/expor.json keycloak:/tmp
+
+docker exec -it keycloak /bin/bash
+
+cd /opt/bitnami/keycloak/bin/bash
+
+./kc.sh import --file /tmp/testing-realm.json
+
+
+chmod u+rw,g+rw /opt/bitnami/keycloak/conf/keycloak.conf   --give write permission to file.
+shumaila shamas
+
+
+
+	@Hook(Pointcut.SERVER_INCOMING_REQUEST_PRE_PROCESSED)
+	public boolean modifyUrl(HttpServletRequest theRequest, HttpServletResponse theResponse) {
+		String originalUrl = theRequest.getRequestURL().toString();
+		String queryString = theRequest.getQueryString();
+		System.out.println("original URL: " + originalUrl);
+		System.out.println("queryString URL: " + queryString);
+
+		if (queryString != null && queryString.contains("|")) {
+			String modifiedQueryString = queryString.replace("|", "%7C");
+			String modifiedUrl = originalUrl + "?" + modifiedQueryString;
+			System.out.println("Modified URL: " + modifiedUrl);
+			theRequest.setAttribute("javax.servlet.forward.query_string", modifiedQueryString);
+		}
+		return true;
+	}
+	
+	hrm@tuf.edu.pk
+	
+	
+	
+	nifi credentials:
+	
+	bd13db11-7740-4788-8a6e-7dc7dd5d2b28
+	
+	QjXE/fftqXhThCVB05eCA7jrBKC1V2PC
+	
+	
+	
+	    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443"
+               maxParameterCount="1000"
+			    relaxedPathChars="|{}[]"
+				relaxedQueryChars="|{}[]"
+               />
+			   
+			   
+			   
+			       <Valve className="com.example.urlencodingvalve"/>
+
+
+
+
+
+1. keycloak version transaction bug fix   -->not fixed
+2. cache file life span of sessions
+3. keyclaok give feature session fine grained. It will split transaction into small modules.

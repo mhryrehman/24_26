@@ -1,0 +1,2 @@
+com.keycloak.security.extensions.mappers.FormParamMapper
+com.keycloak.security.extensions.mappers.ExternalUserAccessProtocolMapper

@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_DB: bitnami_keycloak
+      POSTGRES_USER: db_username
+      POSTGRES_PASSWORD: db_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  keycloak:
+    #image: keycloak:26.1.5-local   # <-- your custom image built from source
+    image: keycloak:26.3.3_stg_org
+    container_name: keycloak
+    depends_on:
+      - postgres
+    environment:
+      # Admin bootstrap (first run)
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+
+      # Enable optional features
+      KC_FEATURES: scripts,token-exchange,admin-fine-grained-authz:v1
+      #KC_FEATURES_DISABLED: "admin-fine-grained-authz"
+      KC_EXTRA_ARGS: -Dkeycloak.profile.feature.upload_scripts=enabled -Dkeycloak.profile.feature.scripts=enabled
+
+      # Database (official Keycloak envs)
+      KC_DB: postgres
+      KC_DB_URL_HOST: postgres
+      KC_DB_URL_PORT: 5432
+      KC_DB_URL_DATABASE: bitnami_keycloak
+      KC_DB_USERNAME: db_username
+      KC_DB_PASSWORD: db_password
+      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8787
+      KEYCLOAK_SPI_CONF: /opt/keycloak/conf/keycloak-spi.conf
+
+      KC_LOG_LEVEL: "info"
+      #KC_EVENTS_ENABLED: "true"
+      KC_SPI_EVENTS_LISTENER_JBOSS_LOGGING_SUCCESS_LEVEL: "info"
+      KC_SPI_EVENTS_LISTENER_JBOSS_LOGGING_INCLUDE_REPRESENTATION: true
+      USERINFO_ENDPOINT_URL: http://172.16.102.238:8090/userinfo
+      
+      #KC_HOSTNAME: auth-local.curemd.net
+
+      
+
+
+    command: ["start-dev"]  # use ["start"] for production
+    ports:
+      - "8082:8080"
+      - "7800:7800"
+      - "8443:8443"
+      - "8787:8787"
+    volumes:
+      # Offical Keycloak (Quarkus) paths:
+      - ./themes:/opt/keycloak/themes
+      - ./providers:/opt/keycloak/providers
+      #- ./cache-ispn.xml:/opt/keycloak/conf/cache-ispn.xml
+      #- ./keycloak-data:/opt/keycloak/data
+      #- ./certs/CureMDNet.crt:/opt/keycloak/conf/CureMDNet.crt
+      #- ./certs/privatekeynet.pem:/opt/keycloak/conf/privatekeynet.pem
+      #- ./certs/curemd-net.keystore:/opt/keycloak/conf/curemd-net.keystore
+      #- ./keycloak.conf:/opt/keycloak/conf/keycloak.conf
+     # - ./keycloak-spi.conf:/opt/keycloak/conf/keycloak-spi.conf
+      
+    networks:
+      - backend
+    # Optional healthcheck
+    # healthcheck:
+    #   test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && echo -e 'GET /' >&3"]
+    #   interval: 30s
+    #   timeout: 5s
+    #   retries: 5
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
+    driver: bridge

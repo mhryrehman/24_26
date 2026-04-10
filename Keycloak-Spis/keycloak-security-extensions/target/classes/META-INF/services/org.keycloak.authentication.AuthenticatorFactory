@@ -1,0 +1,2 @@
+com.keycloak.security.extensions.profilecookie.ProfileCookieAuthenticatorFactory
+com.keycloak.security.extensions.newdevice.NewDeviceAuthenticatorFactory

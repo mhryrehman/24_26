@@ -1,0 +1,17 @@
+com.keycloak.otp.auth.browser.OtpAuthenticatorFormFactory
+com.keycloak.otp.auth.conditional.ConditionalEmailAuthenticatorFormFactory
+com.keycloak.otp.auth.directgrant.OtpAuthenticatorDirectGrantFactory
+com.keycloak.otp.auth.register.SignupOtpAuthenticatorFormFactory
+com.keycloak.otp.auth.register.CreateUserAfterOtpAuthenticator
+com.keycloak.otp.auth.condition.ConditionalClientAuthenticatorFactory
+com.keycloak.otp.auth.condition.SessionNoteConditionAuthenticatorFactory
+com.keycloak.otp.auth.resetcredentials.ResetCredentialSelectUser
+com.keycloak.otp.auth.resetcredentials.PasswordResetNoSessionFactory
+com.keycloak.otp.auth.EulaAuthenticatorFactory
+com.keycloak.otp.auth.OhaAuthenticatorFactory
+com.keycloak.otp.auth.LoggingConfigAuthenticatorFactory
+com.keycloak.otp.auth.register.CreateUserByPhoneOrEmailAuthenticator
+com.keycloak.otp.auth.browser.UsernamePhonePasswordFormFactory
+com.keycloak.otp.auth.resetcredentials.ResetCredentialSelectUserPhoneOrEmail
+com.keycloak.otp.auth.browser.NativeEmailOtpAuthenticatorFactory
+com.keycloak.otp.auth.browser.CustomUsernamePasswordFormFactory

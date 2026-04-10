@@ -1,0 +1,3 @@
+com.keycloak.otp.auth.forms.RegistrationPasswordCapture
+com.keycloak.otp.auth.forms.RegistrationUserCreationCapture
+com.keycloak.otp.auth.forms.RegistrationCaptureEmailOrPhone
