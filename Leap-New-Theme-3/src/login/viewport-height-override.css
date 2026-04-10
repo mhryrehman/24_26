@@ -1,0 +1,145 @@
+/**
+ * Viewport Height Override CSS
+ * This file overrides vh/dvh values to use dynamic custom properties
+ * for better mobile browser toolbar handling
+ */
+
+/* Main auth container - override the fixed dvh height */
+.auth-container {
+  /* height: calc(var(--vh, 1vh) * 100) !important; */
+}
+
+/* Signup wrapper containers */
+.signup-wrapper {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+/* Form wrapper with safe area adjustments */
+.form-wrapper {
+  max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 100px) !important;
+}
+
+/* Carousel container */
+.carousel-container {
+  height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 30px) !important;
+}
+
+/* Images wrapper */
+.images-wrapper {
+  height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 350px) !important;
+}
+
+/* Mobile phones container */
+.mobile-phones-container {
+  width: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 366px) !important;
+  height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 400px) !important;
+}
+
+/* Terms and conditions containers with various breakpoints */
+.oha .term-condition {
+  max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 309px) !important;
+}
+
+.terms .term-condition {
+  max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 401px) !important;
+}
+
+/* Media query overrides for different screen sizes */
+@media (max-width: 1400px) {
+  .images-wrapper {
+    height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 350px) !important;
+  }
+  
+  .mobile-phones-container {
+    width: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 392px) !important;
+    height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 415px) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-wrapper {
+    height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 65px) !important;
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 65px) !important;
+  }
+}
+
+@media (max-width: 912px) {
+  .oha .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 348px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .term .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 349px) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .oha .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 333px) !important;
+  }
+  
+  .term .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 350px) !important;
+  }
+}
+
+@media (max-width: 570px) {
+  .terms .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 351px) !important;
+  }
+}
+@media (max-width: 421px) {
+  .terms .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 377px) !important;
+  }
+}
+@media (max-width: 500px) {
+  .oha .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 358px) !important;
+  }
+}
+@media (max-width:365px){
+    .terms .term-condition {
+        max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 404px) !important;
+    }
+}
+
+@media (max-width: 340px) {
+  .terms .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 401px) !important;
+  }
+  
+  .oha .term-condition {
+    max-height: calc(var(--vh, 1vh) * 100 - env(safe-area-inset-bottom) - 382px) !important;
+  }
+}
+
+/* Utility classes override */
+.vh-100 {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+.min-vh-100 {
+  min-height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+/* Modal backdrop override */
+.modal-backdrop {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+/* Offcanvas overrides */
+.offcanvas-top {
+  height: calc(var(--vh, 1vh) * 30) !important;
+}
+
+.offcanvas-bottom {
+  height: calc(var(--vh, 1vh) * 30) !important;
+}
+
+/* Bootstrap navbar scroll override */
+.navbar-nav-scroll {
+  max-height: calc(var(--vh, 1vh) * 75) !important;
+}

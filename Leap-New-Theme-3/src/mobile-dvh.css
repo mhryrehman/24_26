@@ -1,0 +1,125 @@
+/* Mobile DVH (Dynamic Viewport Height) with toolbar compensation */
+
+/* CSS Custom Properties for mobile viewport */
+:root {
+  --mobile-vh: 100vh; /* Fallback */
+  --toolbar-height: 0px; /* Will be set by JavaScript */
+  --safe-dvh: 100dvh; /* Will be adjusted by JavaScript */
+  --fallback-height: 100vh; /* For browsers without dvh support */
+}
+
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  overflow-x: hidden;
+}
+
+/* Root container with dvh support */
+#root {
+  /* Modern browsers with dvh support */
+  min-height: 100dvh !important;
+  
+  /* Adjusted dvh for mobile toolbars */
+  min-height: var(--safe-dvh) !important;
+  
+  /* Fallback for older browsers */
+  min-height: var(--fallback-height) !important;
+  min-height: var(--mobile-vh) !important;
+}
+
+/* Mobile-safe container class */
+.mobile-safe-height {
+  /* Use dvh first (modern browsers) */
+  min-height: 100dvh !important;
+  
+  /* Adjusted for mobile toolbar */
+  min-height: var(--safe-dvh) !important;
+  
+  /* Fallbacks */
+  min-height: var(--mobile-vh) !important;
+  min-height: 100vh !important;
+}
+
+/* Full height container */
+.full-height-dvh {
+  height: 100dvh !important;
+  height: var(--safe-dvh) !important;
+  height: var(--mobile-vh) !important;
+  height: 100vh !important; /* Final fallback */
+}
+
+/* Prevent zoom on iOS inputs */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  /* Mobile-specific adjustments */
+  .mobile-container {
+    min-height: 100dvh !important;
+    min-height: var(--safe-dvh) !important;
+    min-height: var(--mobile-vh) !important;
+  }
+  
+  /* Handle landscape orientation */
+  @media (orientation: landscape) {
+    .mobile-container {
+      min-height: 100dvh !important;
+      min-height: calc(100dvh - var(--toolbar-height)) !important;
+    }
+  }
+}
+
+/* Support for browsers without dvh */
+@supports not (height: 100dvh) {
+  #root,
+  .mobile-safe-height,
+  .full-height-dvh {
+    min-height: var(--mobile-vh) !important;
+    height: var(--mobile-vh) !important;
+  }
+}
+
+/* Device-specific classes added by JavaScript */
+
+/* Android devices */
+.android-device .mobile-safe-height,
+.android-device #root {
+  /* Use dvh first, then fallback */
+  min-height: 100dvh !important;
+  min-height: var(--mobile-vh) !important;
+}
+
+/* iOS devices */
+.ios-device .mobile-safe-height,
+.ios-device #root {
+  /* iOS Safari handles dvh well, but also support -webkit-fill-available */
+  min-height: 100dvh !important;
+  min-height: -webkit-fill-available !important;
+  min-height: var(--mobile-vh) !important;
+}
+
+/* Android Chrome specific fixes */
+@media screen and (max-width: 768px) {
+  .android-device {
+    /* Chrome mobile address bar compensation */
+    --chrome-toolbar-height: var(--toolbar-height);
+  }
+  
+  .android-device .mobile-container {
+    min-height: calc(100dvh - var(--chrome-toolbar-height, 0px)) !important;
+    min-height: var(--mobile-vh) !important;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .ios-device .mobile-safe-height {
+    min-height: 100dvh !important;
+    min-height: -webkit-fill-available !important;
+    min-height: var(--mobile-vh) !important;
+  }
+}
