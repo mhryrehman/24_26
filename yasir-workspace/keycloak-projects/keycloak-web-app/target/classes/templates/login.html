@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Sign up</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #121212; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .container { background-color: #1e1e1e; padding: 40px 60px; border-radius: 12px;
+                     box-shadow: 0 0 12px rgba(0, 0, 0, 0.6); text-align: center; min-width: 320px; }
+        h2 { font-size: 28px; margin-bottom: 30px; }
+        .button { display: block; width: 100%; padding: 14px; margin: 10px 0; background-color: #3b82f6;
+                  color: white; font-size: 16px; border: none; border-radius: 6px; cursor: pointer;
+                  transition: background-color 0.3s ease; }
+        .button:hover { background-color: #2563eb; }
+        form { margin: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome</h2>
+
+    <!-- Login with Keycloak -->
+<!--    <form action="/oauth2/authorization/keycloak" method="get">-->
+<!--        <button class="button" type="submit">Login with Keycloak</button>-->
+<!--    </form>-->
+
+    <form action="/oauth2/authorization/keycloak" method="get">
+        <p style="margin-bottom: 15px; font-size: 14px; color: #9ca3af;">
+            Launch GUID:
+            <strong th:text="${launchGuid}"></strong>
+        </p>
+        <input type="hidden" name="launch" th:value="${launchGuid}"/>
+        <button class="button" type="submit">Login with Keycloak</button>
+    </form>
+
+
+    <!-- NEW: Sign up with Keycloak (opens registration) -->
+    <form action="/signup" method="get">
+        <button class="button" type="submit">Sign up with Keycloak</button>
+    </form>
+</div>
+</body>
+</html>

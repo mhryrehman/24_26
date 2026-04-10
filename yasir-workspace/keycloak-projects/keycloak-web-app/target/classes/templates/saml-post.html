@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Posting SAMLResponse...</title>
+</head>
+<body>
+<p>Redirecting to Keycloak...</p>
+
+<form id="samlForm" method="post" th:action="${postUrl}">
+    <input type="hidden" name="SAMLResponse" th:value="${samlResponse}" />
+    <input type="hidden" name="RelayState" th:value="${relayState}" />
+    <noscript>
+        <p>JavaScript is required to auto-submit. Click continue:</p>
+        <button type="submit">Continue</button>
+    </noscript>
+</form>
+
+<script>
+    document.getElementById('samlForm').submit();
+</script>
+</body>
+</html>

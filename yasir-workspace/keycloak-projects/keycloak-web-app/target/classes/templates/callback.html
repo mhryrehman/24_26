@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMART App Token Viewer</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .token-box {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+            word-wrap: break-word;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+
+        .label {
+            font-weight: bold;
+            color: #7dd3fc;
+        }
+
+        pre {
+            background-color: #2a2a2a;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<h2>SMART App Launch Token</h2>
+<div class="token-box" id="output">
+    Loading token...
+</div>
+
+<script>
+    async function exchangeCodeForToken() {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+        const state = params.get("state");
+
+        if (!code) {
+            document.getElementById("output").innerText = "Authorization code not found in URL.";
+            return;
+        }
+
+        try {
+            const response = await fetch("http://172.16.102.238:8082/realms/testing/protocol/openid-connect/token", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({
+                    grant_type: "authorization_code",
+                    code: code,
+                    client_id: "test",
+                    client_secret: "FkuyCIZmM6HXmXyfW4EpDaATe4gIFUJg",
+                    redirect_uri: "http://localhost:8080/callback"
+                })
+            });
+
+            const data = await response.json();
+
+            document.getElementById("output").innerHTML = `
+                <div><span class="label">Access Token:</span></div>
+                <pre>${data.access_token || "N/A"}</pre>
+                <div><span class="label">ID Token:</span></div>
+                <pre>${data.id_token || "N/A"}</pre>
+                <div><span class="label">Refresh Token:</span></div>
+                <pre>${data.refresh_token || "N/A"}</pre>
+                <div><span class="label">Expires In:</span> ${data.expires_in || "N/A"} seconds</div>
+                <div><span class="label">Scope:</span> ${data.scope || "N/A"}</div>
+            `;
+        } catch (err) {
+            document.getElementById("output").innerText = "Error exchanging code for token:\n" + err;
+        }
+    }
+
+    exchangeCodeForToken();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: test
+            client-secret: g0Z2bIgiDs2BB18HsYbD5DnfxKUYoX4w
+            scope: openid+email+profile
+        provider:
+          keycloak:
+            issuer-uri: https://fhir.curemd.com:4334/realms/testing
+  

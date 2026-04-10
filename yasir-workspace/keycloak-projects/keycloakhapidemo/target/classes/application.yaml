@@ -1,0 +1,15 @@
+server:
+  port: 8092
+
+keycloak:
+    auth-server-url: https://fhir.curemd.com:4334/
+    realm: testing
+    resource: test
+    bearer-only: true
+    credentials:
+      secret: g0Z2bIgiDs2BB18HsYbD5DnfxKUYoX4w
+    ssl-required: external
+
+spring:
+  main:
+    allow-circular-references: true

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            padding: 40px;
+            position: relative;
+        }
+
+        h2 {
+            color: #7dd3fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .logout-container {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #ef4444;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #dc2626;
+        }
+
+        .token-block {
+            margin-bottom: 30px;
+        }
+
+        pre {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logout-container">
+    <a href="/logout" class="logout-button">Logout</a>
+</div>
+
+<h2>Login Successful!</h2>
+
+<div class="user-info" th:if="${fullName != null}">
+    <p>Welcome, <span th:text="${fullName}"></span>!</p>
+    <p>Email: <span th:text="${email}"></span></p>
+</div>
+
+<div class="token-block" th:if="${idToken != null}">
+    <h3>ID Token</h3>
+    <pre th:text="${idToken}"></pre>
+</div>
+
+<div class="token-block" th:if="${accessToken != null}">
+    <h3>Access Token</h3>
+    <pre th:text="${accessToken}"></pre>
+</div>
+
+<div class="token-block" th:if="${refreshToken != null}">
+    <h3>Refresh Token</h3>
+    <pre th:text="${refreshToken}"></pre>
+</div>
+
+</body>
+</html>
