@@ -1,0 +1,148 @@
+pipeline{
+
+    agent{ 
+        label 'Staging' 
+    }
+
+    stages{
+        stage("Build sandbox"){
+            when{
+                branch "sandbox"
+            }
+            steps{
+                sh 'docker tag hapifhirsandbox hapifhirsandbox:prev || true'
+                sh 'docker build -t hapifhirsandbox -f ${WORKSPACE}/Hapi-Fhir-8.4.0/hapi-fhir-jpaserver-starter/Dockerfile ${WORKSPACE}/Hapi-Fhir-8.4.0/hapi-fhir-jpaserver-starter'
+                sh 'aws ecr get-login-password --region us-east-1  --profile datalake | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com'
+                sh 'docker tag hapifhirsandbox:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest'
+                sh 'docker push 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest'
+            }
+        }
+ 
+        stage("Deploy sandbox"){
+            when{
+                branch "sandbox"
+            }
+            steps{
+                withCredentials([sshUserPrivateKey(credentialsId: 'Datalake-Prod', keyFileVariable: 'key')])
+                {
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker stop hapi-fhir-sandbox || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker rm hapi-fhir-sandbox || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker tag 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:old  || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker rmi 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest  || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker pull 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest  || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker run -d -p 8080:8080 --name hapi-fhir-sandbox 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhirsandbox:latest  || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker cp /etc/ssl/certs/java/cacerts hapi-fhir-sandbox:/etc/ssl/certs/java/cacerts  || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-44-200-32-18.compute-1.amazonaws.com "docker restart hapi-fhir-sandbox  || true"'
+                }
+ 
+            }
+        }
+
+
+
+
+
+        stage("Build production-export"){
+            when{
+                branch "production_export"
+            }
+            steps{
+                sh 'docker tag hapi-fhir-image-prod-export hapifhir-prod-export:prev'
+                sh 'docker build -t hapi-fhir-image-prod-export -f ${WORKSPACE}/HAPI-FHIR-8.0.0/hapi-fhir-jpaserver-starter-master/Dockerfile ${WORKSPACE}/HAPI-FHIR-8.0.0/hapi-fhir-jpaserver-starter-master'
+                script {
+                    def remote = [:]
+                    remote.name = "cmdadmin"
+                    remote.host = "172.16.101.151"
+                    remote.allowAnyHosts = true
+                    remote.failOnError = true
+ 
+                    withCredentials([usernamePassword(credentialsId: '172.16.101.151_credentials', passwordVariable: 'password', usernameVariable: 'username')]) {
+                        remote.user = username
+                        remote.password = password
+                        sshCommand remote: remote, command: "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com"
+                        sshCommand remote: remote, command: "docker tag hapi-fhir-image-prod-export:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest"
+                        sshCommand remote: remote, command: "docker push 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest"
+                    }
+                }
+            }
+        }
+ 
+        stage("Deploy production-export"){
+            when{
+                branch "production_export"
+            }
+            steps{
+                withCredentials([sshUserPrivateKey(credentialsId: 'Datalake-Prod', keyFileVariable: 'key')])
+                {
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker stop hapi-fhir-bulk-export || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker rm hapi-fhir-bulk-export || true"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker tag 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:old"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker rmi 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker pull 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest"'
+                    sh """ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-34-237-145-151.compute-1.amazonaws.com "docker run --restart=always -e JAVA_TOOL_OPTIONS='-Xms12G -Xmx25G' -d --log-driver local --log-opt max-size=50m -p 8080:8080 --name hapi-fhir-bulk-export 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir-export:latest" """
+                }
+ 
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        stage("Build production"){
+            when{
+                branch "production"
+            }
+            steps{
+                sh 'docker tag hapi-fhir-image-prod hapifhir-prod:prev'
+                sh 'docker build -t hapi-fhir-image-prod -f ${WORKSPACE}/HAPI-FHIR-8.0.0/hapi-fhir-jpaserver-starter-master/Dockerfile ${WORKSPACE}/HAPI-FHIR-8.0.0/hapi-fhir-jpaserver-starter-master'
+                script {
+                    def remote = [:]
+                    remote.name = "cmdadmin"
+                    remote.host = "172.16.101.151"
+                    remote.allowAnyHosts = true
+                    remote.failOnError = true
+ 
+                    withCredentials([usernamePassword(credentialsId: '172.16.101.151_credentials', passwordVariable: 'password', usernameVariable: 'username')]) {
+                        remote.user = username
+                        remote.password = password
+                        sshCommand remote: remote, command: "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com"
+                        sshCommand remote: remote, command: "docker tag hapi-fhir-image-prod:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest"
+                        sshCommand remote: remote, command: "docker push 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest"
+                    }
+                }
+            }
+        }
+ 
+        stage("Deploy production"){
+            when{
+                branch "production"
+            }
+            steps{
+                withCredentials([sshUserPrivateKey(credentialsId: 'Datalake-Prod', keyFileVariable: 'key')])
+                {
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 017225426824.dkr.ecr.us-east-1.amazonaws.com"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker stop hapi-fhir"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker rm hapi-fhir"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker tag 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:old"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker rmi 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest"'
+                    sh 'ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker pull 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest"'
+                    sh """ssh -o StrictHostKeyChecking=no -i ${key} ubuntu@ec2-52-207-118-93.compute-1.amazonaws.com "docker run --restart=always -e JAVA_TOOL_OPTIONS='-Xms6G -Xmx10G' -d --log-driver local --log-opt max-size=50m -p 8080:8080 --name hapi-fhir 017225426824.dkr.ecr.us-east-1.amazonaws.com/hapifhir:latest" """
+                }
+ 
+            }
+        }
+    }
+}
